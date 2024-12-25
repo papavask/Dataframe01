@@ -7,7 +7,7 @@ def load_data(url):
 st.title("Dataframe browser")
 
 
-df = load_data("https://github.com/plotly/datasets/raw/master/uber-rides-data1.csv")
+df = load_data("https://github.com/papavask/Dataframe01/blob/main/Text01.txt")
 st.dataframe(df)
 
 st.button("Rerun")
