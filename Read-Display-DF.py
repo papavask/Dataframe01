@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 def load_data(url):
-    df = pd.read_fwf(url, encoding='utf8', header=None, names = ["A_line"])  # 👈 Download the data
+    df = pd.read_fwf(url, encoding='utf8', header=None, names = ["A_line"], width=200)  # 👈 Download the data
     return df
 
 st.title("Dataframe browser")
