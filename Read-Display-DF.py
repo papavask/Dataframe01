@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 def load_data(url):
     df = pd.read_csv(url)  # 👈 Download the data
