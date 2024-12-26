@@ -19,6 +19,7 @@ else:
     st.error("Failed to load data from GitHub.")
     df = None
 
-st.dataframe(df)
+resp.text#st.dataframe(df)
+st.write(resp.text)
 
 st.button("Rerun")
