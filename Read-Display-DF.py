@@ -14,6 +14,10 @@ df_url = "https://raw.githubusercontent.com/papavask/Dataframe01/main/Text01.txt
 # df = load_data(df_url)
 resp = requests.get(df_url)
 st.write(resp.status_code)
+
+js_v = json.loads(resp.text)
+st.write(js_v)
+
 if resp.status_code == 200:
     df = pd.read_csv(StringIO(resp.text))
 else:
@@ -21,6 +25,6 @@ else:
     df = None
 
 #st.dataframe(df)
-st.write(resp.text)
+#st.write(resp.text)
 
 st.button("Rerun")
