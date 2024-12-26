@@ -13,8 +13,8 @@ st.title("Dataframe browser")
 df_url = "https://raw.githubusercontent.com/papavask/Dataframe01/main/Text01.txt"
 # df = load_data(df_url)
 resp = requests.get(df_url)
-if response.status_code == 200:
-    df = pd.read_csv(StringIO(response.text))
+if resp.status_code == 200:
+    df = pd.read_csv(StringIO(resp.text))
 else:
     st.error("Failed to load data from GitHub.")
     df = None
